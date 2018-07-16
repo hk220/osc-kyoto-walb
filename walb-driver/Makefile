@@ -24,6 +24,6 @@ unautoload:
 	rm /etc/modules-load.d/walb.conf
 
 load-module:
-	modprobe
+	modprobe walb
 
 .PHONY: setup walb-driver install
