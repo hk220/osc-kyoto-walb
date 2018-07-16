@@ -2,7 +2,7 @@ all: walb-driver
 
 install:
 	mkdir -p /lib/modules/`uname -r`/kernel/drivers/block/walb
-	cp -p ~/walb-driver/module/walb-mod.ko /lib/modules/`uname -r`/kernel/drivers/block/walb/
+	cp -p ~/osc-kyoto-walb/walb-driver/walb-driver/module/walb-mod.ko /lib/modules/`uname -r`/kernel/drivers/block/walb/
 	depmod `uname -r`
 
 setup:
