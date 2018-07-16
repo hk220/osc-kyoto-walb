@@ -18,7 +18,7 @@ clean:
 	rm -rf walb-driver
 
 autoload:
-	cat walb > /etc/modules-load.d/walb.conf
+	echo walb > /etc/modules-load.d/walb.conf
 
 unautoload:
 	rm /etc/modules-load.d/walb.conf
