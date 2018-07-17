@@ -10,8 +10,14 @@ git clone https://github.com/hk220/osc-kyoto-walb.git
 WORK_DIR=$(pwd)/osc-kyoto-walb
 cd ${WORK_DIR}/walb-driver
 sudo make setup
+make
+sudo make install
+sudo make autoload
+sudo make load-module
 
 cd ${WORK_DIR}/walb-tools
 sudo make setup
+make
+sudo make install
 
 sudo reboot
