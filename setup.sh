@@ -1,6 +1,6 @@
 #!/bin/sh
 
-WORK_DIR=$(pwd)/osc-kyoto-walb
+WORK_DIR=$(pwd)
 cd ${WORK_DIR}/walb-driver
 make
 sudo make install
