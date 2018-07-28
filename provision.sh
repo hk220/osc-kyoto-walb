@@ -3,7 +3,7 @@
 sudo sed -i -e 's://archive://jp.archive:g' /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y build-essential
+sudo apt-get install -y build-essential ipython
 
 
 if [ ! -d $(pwd)/osc-kyoto-walb ]; then

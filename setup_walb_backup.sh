@@ -1,4 +1,6 @@
 #!/bin/sh
 
-sudo walb-proxy -b /var/log/p0/ -l /var/log/p0.log -p 10100 -bg 1 -fg 2 -id p0 &
-sudo walb-archive -b /var/log/a0/ -vg demo -l /var/log/a0.log -p 10200 -fg 2 -id a0 &
+sudo mkdir -p /var/log/a0 /var/log/p0
+
+sudo walb-proxy -b /var/log/p0/ -bg 10 -fg 5 -id backup -l /var/log/p0.log -maxconn 200 -p 10100 -to 600 &
+sudo walb-archive -b /var/log/a0/ -fg 20 -id backup -l /var/log/a0.log -maxconn 200 -maxopen 1024 -p 10200 -to 600 -vg demo &
